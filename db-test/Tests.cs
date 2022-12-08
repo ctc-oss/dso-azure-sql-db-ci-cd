@@ -23,12 +23,12 @@ namespace AzureSQLDevelopers.Database
         [Test]
         public void CheckEmptyJSON()
         {                    
-            using(var conn = new SqlConnection(ConnectionString))
+            /*using(var conn = new SqlConnection(ConnectionString))
             {
                 var result = conn.ExecuteScalar<string>("web.get_trainingsessionsync", new { @json = "{}" }, commandType: CommandType.StoredProcedure);
                 var jsonResult = JObject.Parse(result);
                 Assert.AreEqual("Full", (string)jsonResult.SelectToken("Metadata.Sync.Type"));
-            }            
+            }*/
         }           
     }
 }
